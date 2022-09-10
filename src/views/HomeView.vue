@@ -1,11 +1,15 @@
 <template>
   <GuestLayout>
-    <div class="w-full h-[550px] grid grid-cols-2">
-      <div class="w-full h-full col-span-1">
+    <div id="home" class="w-full h-[550px] lg:grid grid-cols-2 relative">
+      <div
+        class="w-full h-full lg:col-span-1 sm:flex justify-center items-center"
+      >
         <OrganizeProjectIllustration />
       </div>
-      <div class="w-full h-full col-span-1 flex justify-center items-center">
-        <p class="text-center text-main text-5xl font-semibold">
+      <div
+        class="w-full absolute top-3 h-20 lg:h-full lg:static lg:col-span-1 flex justify-center items-center"
+      >
+        <p class="text-center text-main text-2xl lg:text-5xl font-semibold">
           Make Your Project's Lifecycle <br />
           Funnier and Easy
         </p>
@@ -19,24 +23,26 @@
           <p class="text-2xl text-main">Trusted By Many Companies</p>
         </div>
         <div class="w-full h-5/6 flex justify-evenly items-center">
-          <MetaLogo />
-          <TeslaLogo />
-          <TwitterLogo />
-          <OmegaLogo />
-          <LinkedInLogo />
+          <MetaLogo class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px]" />
+          <TeslaLogo class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px]" />
+          <TwitterLogo class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px]" />
+          <OmegaLogo class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px]" />
+          <LinkedInLogo class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px]" />
         </div>
       </div>
     </div>
     <div
       id="features"
-      class="w-full h-screen pt-[1px] bg-gradient-to-l from-main to-background"
+      class="w-full h-auto lg:h-screen pt-[1px] bg-gradient-to-l from-main to-background"
     >
       <div class="w-full h-full bg-background">
         <div class="w-full h-20 flex justify-center items-center">
           <p class="text-2xl text-main">Features</p>
         </div>
-        <div class="w-full h-[calc(100%-5rem)] grid grid-cols-2">
-          <div class="col-span-1 flex flex-col justify-center items-center">
+        <div
+          class="w-full h-[calc(100%-5rem)] flex flex-col lg:grid lg:grid-cols-2"
+        >
+          <div class="lg:col-span-1 flex flex-col justify-center items-center">
             <div class="w-full h-20 flex justify-start items-center">
               <p class="text-2xl text-main">Project Planning</p>
             </div>
@@ -63,7 +69,7 @@
               </p>
             </div>
           </div>
-          <div class="col-span-1 flex justify-center items-center">
+          <div class="lg:col-span-1 flex justify-center items-center">
             <TasksIllustration />
           </div>
         </div>
