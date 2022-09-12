@@ -41,12 +41,14 @@
         Contact
       </a>
       <router-link
+        @click="closeSidebar"
         to="login"
         class="text-lg text-main duration-150 hover:text-secondary"
       >
         Log in
       </router-link>
       <router-link
+        @click="closeSidebar"
         to="register"
         class="text-lg text-main duration-150 hover:text-secondary"
       >

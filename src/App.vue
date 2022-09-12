@@ -1,3 +1,3 @@
 <template>
-  <router-view></router-view>
+  <router-view v-slot="{ Component }"> </router-view>
 </template>

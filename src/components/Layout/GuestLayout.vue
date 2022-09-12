@@ -1,5 +1,5 @@
 <template>
-  <Sidebar />
+  <GuestSidebar />
   <div
     class="w-full h-auto flex flex-col justify-start items-center bg-background overflow-x-hidden"
   >
@@ -44,16 +44,18 @@
         <div
           class="hidden col-span-1 lg:flex justify-end items-center space-x-6 relative"
         >
-          <p
+          <router-link
+            :to="{ name: 'login' }"
             class="text-xl text-main cursor-pointer hover:text-whit duration-200"
           >
             Log In
-          </p>
-          <button
-            class="px-6 h-10 bg-main text-whit rounded-lg hover:bg-orange-600 duration-200"
+          </router-link>
+          <router-link
+            :to="{ name: 'register' }"
+            class="px-6 h-10 bg-main text-whit rounded-lg hover:bg-orange-600 duration-200 flex justify-center items-center"
           >
             Sign Up
-          </button>
+          </router-link>
         </div>
         <div
           class="w-9 h-9 absolute z-50 right-6 lg:hidden flex flex-col justify-between overflow-x-hidden"
@@ -83,7 +85,7 @@
 </template>
 
 <script setup>
-import Sidebar from "@/components/Layout/Sidebar.vue";
+import GuestSidebar from "@/components/Layout/GuestSidebar.vue";
 import { useUiStore } from "@/stores/uiStore.js";
 import { storeToRefs } from "pinia";
 
