@@ -1,0 +1,1 @@
+<template>single-project</template>

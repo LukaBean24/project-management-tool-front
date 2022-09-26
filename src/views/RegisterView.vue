@@ -193,7 +193,7 @@ import VissibleIcon from "@/assets/icons/VissibleIcon.vue";
 import UnvissibleIcon from "@/assets/icons/UnvissibleIcon.vue";
 import LoginIllustration from "@/assets/illustrations/LoginIllustration.vue";
 import EmailVerificationSent from "@/components/modals/EmailVerificationSent.vue";
-import axios from "@/config/axios/index.js";
+import { axiosForRegister } from "@/config/axios/index.js";
 import { ref } from "vue";
 
 const email = ref("");
@@ -222,7 +222,7 @@ const closeVerifyModal = () => {
 };
 
 const onSubmit = () => {
-  axios
+  axiosForRegister
     .post("/register", {
       email: email.value,
       password: password.value,

@@ -123,8 +123,10 @@ import axios from "@/config/axios/index.js";
 import { setJwtToken } from "@/helpers/jwt/index.js";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useUserStore } from "@/stores/userStore.js";
 
 const router = useRouter();
+const store = useUserStore();
 
 const email = ref("");
 const password = ref("");
@@ -150,6 +152,9 @@ const onSubmit = () => {
       if (response.status === 200) {
         setJwtToken(response.data.access_token, response.data.expires_in);
         router.push({ name: "workspaces" });
+        axios.post("/user").then((response) => {
+          store.updateUserInfo(response.data);
+        });
       }
     })
     .catch((error) => {

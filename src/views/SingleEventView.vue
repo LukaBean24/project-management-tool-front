@@ -1,0 +1,1 @@
+<template>single-event</template>

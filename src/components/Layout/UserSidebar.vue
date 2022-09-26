@@ -1,7 +1,7 @@
 <template>
   <div
-    class="w-1/2 md:w-2/6 xl:w-1/6 h-screen bg-white fixed z-50 top-0 duration-200 pl-10 flex justify-end items-center"
-    :class="sidebar ? 'left-0' : '-left-1/2 lg:-left-1/6'"
+    class="w-2/3 md:w-2/6 xl:w-1/6 h-screen bg-background fixed z-50 top-0 duration-200 pl-10 flex justify-end items-center"
+    :class="sidebar ? 'left-0' : '-left-2/3 lg:-left-1/6'"
   >
     <CloseIcon
       fill="#FD7014"
@@ -12,7 +12,7 @@
       class="w-full h-5/6 flex flex-col justify-center items-center space-y-6 py-6"
     >
       <router-link
-        to="/workspace"
+        to="/workspaces"
         class="w-full h-16 bg-main rounded-l-xl hover:bg-orange-600 duration-150 cursor-pointer px-6 flex justify-start items-center space-x-6"
       >
         <WorkspaceIcon fill="#ffffff" />
@@ -44,10 +44,10 @@
         class="w-full h-16 bg-main rounded-l-xl hover:bg-orange-600 duration-150 cursor-pointer px-6 flex justify-start items-center space-x-6"
       >
         <TeamsIcon fill="#ffffff" />
-        <p class="text-xl text-white">Tasks</p>
+        <p class="text-xl text-white">Teams</p>
       </router-link>
       <router-link
-        to="/messages"
+        :to="{ name: 'messenger' }"
         class="w-full h-16 bg-main rounded-l-xl hover:bg-orange-600 duration-150 cursor-pointer px-6 flex justify-start items-center space-x-6"
       >
         <MessagesIcon fill="#ffffff" />
